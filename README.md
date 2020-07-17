@@ -1,19 +1,19 @@
-# ant-motion-dva-cli-example
+# dva-cli-example
 
-[ant motion](https://motion.ant.design/) 的首页在 [dva-cli](https://github.com/dvajs/dva-cli)0.8.0 里运行的例子
+Un ejemplo de ejecución de la página de inicio de [dva-cli] (https://github.com/dvajs/dva-cli) 0.8.0
 
-请参照[documentation](https://github.com/ant-motion/ant-motion-dva-cli-example/blob/2.0/src/routes/Home/documentation.md)里的步骤。。
+Por favor refiérase a la [documentación](https://github.com/ant-motion/dva-cli-example/blob/2.0/src/routes/Home/documentation.md)
 
-### 2.0 的改动
+### 2.0 Cambios
 
-2.0 里的改动是依据 dva 2.x 脚手架的改动而改动，如果不是 dva-cli 脚手架，去除 index.js 里的 show 相关代码：
+2.0 Los cambios aquí se basan en los cambios en el andamio dva 2.x. Si no es el andamio dva-cli, elimine el código relacionado con mostrar en index.js:
 
-1. stage 里的 [show](https://github.com/ant-motion/ant-motion-dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L20);
-2. didMount 里的 [if 处理](https://github.com/ant-motion/ant-motion-dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L29-L37)
+1. stage interior [show](https://github.com/machinaai/dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L20);
+2. didMount interior [if](https://github.com/machinaai/dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L29-L37)
 ```jsx
-    // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
+    // dva 2.0 El estilo se carga dinámicamente después de renderizar el componente, lo que hace que el componente de desplazamiento no surta efecto; no se verá afectado en línea;
     if (location.port) {
-      // 样式 build 时间在 200-300ms 之间;
+      // El tiempo de construcción del estilo es de entre 200 y 300 ms;
       setTimeout(() => {
         this.setState({
           show: true,
@@ -22,7 +22,7 @@
     }
 ```
 
-3. return 里 [children 的处理](https://github.com/ant-motion/ant-motion-dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L64), 替换为 `{children}`
+3. return ev [El manejo de children](https://github.com/machinaai/dva-cli-example/blob/2.0/src/routes/Home/index.jsx#L64), Reemplazar con `{children}`
 
-0.7.8 例子请切回 [master](https://github.com/ant-motion/ant-motion-dva-cli-example/tree/master)
+0.7.8 Ejemplo, vuelva a cambiar [master](https://github.com/machinaai/dva-cli-example/tree/master)
 
